@@ -1,5 +1,15 @@
 # HOLY F****NG HELL !!! HOW HARD IS IT TO SHIP A DLL ??!!
 
+```
+Open VS2022 Developer Powershell
+git clone https://github.com/TheAjaykrishnanR/detours-dll.git
+cd src
+nmake
+link /dll /out:detours.dll /def:detours.def obj.X86\*.obj
+PROFIT!!!
+
+```
+
 # Microsoft Research Detours Package
 
 Detours is a software package for monitoring and instrumenting API calls on Windows. Detours
