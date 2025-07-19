@@ -4,10 +4,15 @@
 Open VS2022 Developer Powershell
 git clone https://github.com/TheAjaykrishnanR/detours-dll.git
 cd src
+# for 32 bit
+set DETOURS_TARGET_PROCESSOR=X86
+link /dll /out:detours32.dll /def:detours.def obj.X86\*.obj
 nmake
-link /dll /out:detours.dll /def:detours.def obj.X86\*.obj
+# for 64 bit
+set DETOURS_TARGET_PROCESSOR=X64
+link /dll /out:detours64.dll /def:detours.def obj.X86\*.obj
+nmake
 PROFIT!!!
-
 ```
 
 # Microsoft Research Detours Package
